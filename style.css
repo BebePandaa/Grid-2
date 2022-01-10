@@ -1,0 +1,53 @@
+body { 
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    border: 1px solid #ccc;
+    background-color: #ccc;
+}
+
+.grid {
+    display: grid;
+    grid-template: auto / repeat(12, 1fr);
+}
+
+#page {
+    display: grid;
+    width: 100%;
+    height: 200px;
+    grid-template: [header-left] "head head" 30px [header-right]
+                   [main-left]   "nav  main" 1fr  [main-right]
+  }
+  
+header {
+    background-color: lime;
+    grid-area: head;
+    width: 100%;
+    height: 200px;
+  }
+  
+nav {
+    background-color: lightblue;
+    grid-area: nav;
+}
+  
+main {
+    background-color: yellow;
+    grid-area: main;
+}
+  
+.grid > div { 
+    background-color: lightcoral;
+    border: solid 1px lightcoral;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 400px 400px 400px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-content: center;
+}
